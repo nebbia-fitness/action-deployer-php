@@ -23,7 +23,4 @@ chmod 600 /tmp/id_rsa
 ssh-add /tmp/id_rsa
 
 deployer --version
-deployer $CMD_ARGS > /tmp/output.log
-
-export DEPLOYER_OUTPUT="$(</tmp/output.log)"
-echo "::set-env name=DEPLOYER_OUTPUT::$DEPLOYER_OUTPUT"
+deployer $CMD_ARGS 
